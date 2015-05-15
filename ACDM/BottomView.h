@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BottomView.h
 //  ACDM
 //
 //  Created by LiJunliang on 15/5/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
-
+@interface BottomView : UIView
 
 @end
-

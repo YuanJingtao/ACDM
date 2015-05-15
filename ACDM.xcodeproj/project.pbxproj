@@ -15,6 +15,7 @@
 		9BF303151B0590F30006E979 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF303141B0590F30006E979 /* Images.xcassets */; };
 		9BF303181B0590F30006E979 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF303161B0590F30006E979 /* LaunchScreen.xib */; };
 		9BF303241B0590F30006E979 /* ACDMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303231B0590F30006E979 /* ACDMTests.m */; };
+		9BF303301B05B1AC0006E979 /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3032F1B05B1AC0006E979 /* BottomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		9BF3031D1B0590F30006E979 /* ACDMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACDMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF303221B0590F30006E979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF303231B0590F30006E979 /* ACDMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACDMTests.m; sourceTree = "<group>"; };
+		9BF3032E1B05B1AC0006E979 /* BottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
+		9BF3032F1B05B1AC0006E979 /* BottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		9BF303031B0590F30006E979 /* ACDM */ = {
 			isa = PBXGroup;
 			children = (
+				9BF3032D1B05B1780006E979 /* Widget */,
 				9BF303081B0590F30006E979 /* AppDelegate.h */,
 				9BF303091B0590F30006E979 /* AppDelegate.m */,
 				9BF3030E1B0590F30006E979 /* ViewController.h */,
@@ -120,6 +124,15 @@
 				9BF303221B0590F30006E979 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BF3032D1B05B1780006E979 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				9BF3032E1B05B1AC0006E979 /* BottomView.h */,
+				9BF3032F1B05B1AC0006E979 /* BottomView.m */,
+			);
+			name = Widget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +238,7 @@
 				9BF3030A1B0590F30006E979 /* AppDelegate.m in Sources */,
 				9BF3030D1B0590F30006E979 /* ACDM.xcdatamodeld in Sources */,
 				9BF303101B0590F30006E979 /* ViewController.m in Sources */,
+				9BF303301B05B1AC0006E979 /* BottomView.m in Sources */,
 				9BF303071B0590F30006E979 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
