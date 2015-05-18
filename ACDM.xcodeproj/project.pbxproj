@@ -12,6 +12,7 @@
 		9B45F42A1B09892B00D40705 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F4291B09892B00D40705 /* BorderView.m */; };
 		9B45F4301B09A3E700D40705 /* ProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F42F1B09A3E700D40705 /* ProgressBar.m */; };
 		9B45F4351B09B23200D40705 /* OrangeBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F4341B09B23200D40705 /* OrangeBorder.m */; };
+		9B45F43B1B09E00500D40705 /* PillarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F43A1B09E00500D40705 /* PillarGraph.m */; };
 		9BF303071B0590F30006E979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303061B0590F30006E979 /* main.m */; };
 		9BF3030A1B0590F30006E979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303091B0590F30006E979 /* AppDelegate.m */; };
 		9BF3030D1B0590F30006E979 /* ACDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3030B1B0590F30006E979 /* ACDM.xcdatamodeld */; };
@@ -45,6 +46,8 @@
 		9B45F42F1B09A3E700D40705 /* ProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressBar.m; sourceTree = "<group>"; };
 		9B45F4331B09B23200D40705 /* OrangeBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrangeBorder.h; sourceTree = "<group>"; };
 		9B45F4341B09B23200D40705 /* OrangeBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeBorder.m; sourceTree = "<group>"; };
+		9B45F4391B09E00500D40705 /* PillarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PillarGraph.h; path = ../../testclock/testclock/PillarGraph.h; sourceTree = "<group>"; };
+		9B45F43A1B09E00500D40705 /* PillarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PillarGraph.m; path = ../../testclock/testclock/PillarGraph.m; sourceTree = "<group>"; };
 		9BF303011B0590F30006E979 /* ACDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF303051B0590F30006E979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF303061B0590F30006E979 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 		9BF3032D1B05B1780006E979 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				9B45F4391B09E00500D40705 /* PillarGraph.h */,
+				9B45F43A1B09E00500D40705 /* PillarGraph.m */,
 				9B45F42E1B09A3E700D40705 /* ProgressBar.h */,
 				9B45F42F1B09A3E700D40705 /* ProgressBar.m */,
 				9B45F4221B09791700D40705 /* Gauge.h */,
@@ -271,6 +276,7 @@
 				9B45F4271B097CA300D40705 /* PlanFinishView.m in Sources */,
 				9B45F4301B09A3E700D40705 /* ProgressBar.m in Sources */,
 				9BF3030D1B0590F30006E979 /* ACDM.xcdatamodeld in Sources */,
+				9B45F43B1B09E00500D40705 /* PillarGraph.m in Sources */,
 				9BF303101B0590F30006E979 /* ViewController.m in Sources */,
 				9B45F4351B09B23200D40705 /* OrangeBorder.m in Sources */,
 				9BF303301B05B1AC0006E979 /* BottomView.m in Sources */,

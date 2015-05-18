@@ -1292,10 +1292,24 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="21x-Dc-g68">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BarGraphCell" rowHeight="297" id="21x-Dc-g68">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="21x-Dc-g68" id="gId-QD-TaA">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-kN-ezn" customClass="PillarGraph">
+                                                    <rect key="frame" x="20" y="8" width="280" height="280"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="280" id="Afu-AK-Vca"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GBC-kN-ezn" firstAttribute="bottom" secondItem="gId-QD-TaA" secondAttribute="bottomMargin" id="dBz-0m-1Wg"/>
+                                                <constraint firstItem="GBC-kN-ezn" firstAttribute="top" secondItem="gId-QD-TaA" secondAttribute="topMargin" id="hy1-1P-Xp2"/>
+                                                <constraint firstAttribute="centerX" secondItem="GBC-kN-ezn" secondAttribute="centerX" id="oeN-t5-ajo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UU7-UW-S10">

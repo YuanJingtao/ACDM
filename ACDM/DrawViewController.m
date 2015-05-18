@@ -45,7 +45,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.row) {
-        case 1:  case 5: case 7:
+        case 1:   case 7:
             return 131;
             break;
         case 2: case 3: case 6: case 8:
@@ -53,6 +53,9 @@
             break;
         case 4:
             return 161;
+            break;
+        case 5:
+            return 297;
             break;
         default:
             return 0;
@@ -64,7 +67,7 @@
     UITableViewCell *cell = nil;
     // Configure the cell...
     switch (indexPath.row) {
-        case 1:  case 5: case 7:
+        case 1:   case 7:
             cell = [tableView dequeueReusableCellWithIdentifier:@"PlaneFinishCell"];
             break;
         case 2:  case 6: case 8:
@@ -75,6 +78,9 @@
             break;
         case 4:
             cell = [tableView dequeueReusableCellWithIdentifier:@"PlaneAbnormalCell"];
+            break;
+        case 5:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"BarGraphCell"];
             break;
         default:
             cell = [[UITableViewCell alloc]init];
