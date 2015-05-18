@@ -643,7 +643,7 @@
                                     <constraint firstAttribute="bottom" secondItem="p8x-p5-mJT" secondAttribute="bottom" id="rhi-9H-aLI"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nhq-e2-BQH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nhq-e2-BQH">
                                 <rect key="frame" x="0.0" y="64" width="320" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -796,7 +796,112 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HrG-G5-PL3" customClass="BorderView">
                                                     <rect key="frame" x="8" y="8" width="304" height="104"/>
-                                                    <color key="backgroundColor" red="0.33333333329999998" green="0.60392156860000001" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBN-wC-po0" userLabel="line">
+                                                            <rect key="frame" x="16" y="30" width="272" height="2"/>
+                                                            <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="2" id="p9j-js-IN9"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进港" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMO-Oy-vXj">
+                                                            <rect key="frame" x="140" y="10" width="24" height="12"/>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="12"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计划架次：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTO-ez-HPI">
+                                                            <rect key="frame" x="20" y="40" width="55" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="55" id="85i-Ey-9YO"/>
+                                                                <constraint firstAttribute="height" constant="11" id="96f-RM-9dN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvb-mQ-23Z">
+                                                            <rect key="frame" x="100" y="40" width="22" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="hZ3-Dp-AAU"/>
+                                                                <constraint firstAttribute="width" constant="22" id="wa6-au-OBI"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7H-1W-3sG">
+                                                            <rect key="frame" x="75" y="40" width="25" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="NT9-k9-Ppf"/>
+                                                                <constraint firstAttribute="width" constant="25" id="S8L-aN-9yV"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计划架次：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpL-aF-T49">
+                                                            <rect key="frame" x="182" y="40" width="55" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="cUf-ly-dh8"/>
+                                                                <constraint firstAttribute="width" constant="55" id="ykL-Df-493"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XC4-t4-heZ">
+                                                            <rect key="frame" x="262" y="40" width="22" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="fmo-NG-wDh"/>
+                                                                <constraint firstAttribute="height" constant="11" id="hT9-Do-2YQ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-bb-5Rm">
+                                                            <rect key="frame" x="237" y="40" width="25" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="R2u-cs-Ucd"/>
+                                                                <constraint firstAttribute="width" constant="25" id="mLa-5j-adz"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLq-Rg-Lgy" customClass="ProgressBar">
+                                                            <rect key="frame" x="16" y="66" width="272" height="18"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="3HT-O6-Kzo"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="YLq-Rg-Lgy" secondAttribute="bottom" constant="20" id="0bD-lf-0JS"/>
+                                                        <constraint firstItem="n7H-1W-3sG" firstAttribute="top" secondItem="hBN-wC-po0" secondAttribute="bottom" constant="8" id="2n7-oi-LmT"/>
+                                                        <constraint firstItem="Tvb-mQ-23Z" firstAttribute="top" secondItem="hBN-wC-po0" secondAttribute="bottom" constant="8" id="36c-oW-5tS"/>
+                                                        <constraint firstItem="XC4-t4-heZ" firstAttribute="leading" secondItem="kRO-bb-5Rm" secondAttribute="trailing" id="5lX-DQ-VBl"/>
+                                                        <constraint firstItem="YLq-Rg-Lgy" firstAttribute="leading" secondItem="HrG-G5-PL3" secondAttribute="leading" constant="16" id="7rK-sE-094"/>
+                                                        <constraint firstItem="kRO-bb-5Rm" firstAttribute="leading" secondItem="zpL-aF-T49" secondAttribute="trailing" id="8hk-a7-pYh"/>
+                                                        <constraint firstItem="Tvb-mQ-23Z" firstAttribute="leading" secondItem="n7H-1W-3sG" secondAttribute="trailing" id="GfY-v9-h0a"/>
+                                                        <constraint firstItem="zpL-aF-T49" firstAttribute="top" secondItem="hBN-wC-po0" secondAttribute="bottom" constant="8" id="OCJ-1u-zwu"/>
+                                                        <constraint firstItem="RMO-Oy-vXj" firstAttribute="top" secondItem="HrG-G5-PL3" secondAttribute="top" constant="10" id="QSr-Dk-DiJ"/>
+                                                        <constraint firstItem="YLq-Rg-Lgy" firstAttribute="top" secondItem="n7H-1W-3sG" secondAttribute="bottom" constant="15" id="Ulb-BV-PKJ"/>
+                                                        <constraint firstAttribute="centerX" secondItem="RMO-Oy-vXj" secondAttribute="centerX" id="VRQ-8G-KfY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XC4-t4-heZ" secondAttribute="trailing" constant="20" id="Vd9-OV-Q4y"/>
+                                                        <constraint firstItem="fTO-ez-HPI" firstAttribute="leading" secondItem="HrG-G5-PL3" secondAttribute="leading" constant="20" id="YS1-D3-lDS"/>
+                                                        <constraint firstItem="kRO-bb-5Rm" firstAttribute="top" secondItem="hBN-wC-po0" secondAttribute="bottom" constant="8" id="ZzO-wX-efD"/>
+                                                        <constraint firstItem="hBN-wC-po0" firstAttribute="leading" secondItem="HrG-G5-PL3" secondAttribute="leading" constant="16" id="b5n-N5-cVm"/>
+                                                        <constraint firstItem="fTO-ez-HPI" firstAttribute="top" secondItem="hBN-wC-po0" secondAttribute="bottom" constant="8" id="dbu-Ks-JQU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hBN-wC-po0" secondAttribute="trailing" constant="16" id="f3T-g5-UxJ"/>
+                                                        <constraint firstItem="XC4-t4-heZ" firstAttribute="top" secondItem="hBN-wC-po0" secondAttribute="bottom" constant="8" id="jry-Vx-c20"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YLq-Rg-Lgy" secondAttribute="trailing" constant="16" id="lLh-DN-Tif"/>
+                                                        <constraint firstItem="n7H-1W-3sG" firstAttribute="leading" secondItem="fTO-ez-HPI" secondAttribute="trailing" id="pDT-JK-zia"/>
+                                                        <constraint firstItem="hBN-wC-po0" firstAttribute="top" secondItem="RMO-Oy-vXj" secondAttribute="bottom" constant="8" id="zpG-c8-pGj"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -807,10 +912,384 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nRN-yi-T58">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DepartPortCell" rowHeight="121" id="TWL-Su-pw0" userLabel="DepartPortCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TWL-Su-pw0" id="54m-9A-o59">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WC4-bJ-Vlq" customClass="BorderView">
+                                                    <rect key="frame" x="8" y="8" width="304" height="104"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zm-2T-LDD" userLabel="line">
+                                                            <rect key="frame" x="16" y="30" width="272" height="2"/>
+                                                            <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="2" id="ule-MU-J3h"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="离港" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJN-lA-rXz">
+                                                            <rect key="frame" x="140" y="10" width="24" height="12"/>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="12"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计划架次：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inE-Jv-xfS">
+                                                            <rect key="frame" x="20" y="40" width="55" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="00O-cQ-S9G"/>
+                                                                <constraint firstAttribute="width" constant="55" id="0Gx-Ur-dNF"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRO-0H-Hzz">
+                                                            <rect key="frame" x="100" y="40" width="22" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="7nk-F0-ZzV"/>
+                                                                <constraint firstAttribute="height" constant="11" id="lqI-LQ-Jfy"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plO-mI-lE0">
+                                                            <rect key="frame" x="75" y="40" width="25" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="i9D-iD-7bJ"/>
+                                                                <constraint firstAttribute="height" constant="11" id="tBv-zG-Olj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计划架次：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="374-6T-frx">
+                                                            <rect key="frame" x="182" y="40" width="55" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="LMv-VW-ztR"/>
+                                                                <constraint firstAttribute="width" constant="55" id="r96-zU-v6v"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6m-eU-jhx">
+                                                            <rect key="frame" x="262" y="40" width="22" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="FzI-Av-7VF"/>
+                                                                <constraint firstAttribute="width" constant="22" id="zCW-Aw-a6J"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEJ-PY-ie2">
+                                                            <rect key="frame" x="237" y="40" width="25" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="TmA-ic-g7O"/>
+                                                                <constraint firstAttribute="height" constant="11" id="qDI-XZ-QJe"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZK-eX-mKN" customClass="ProgressBar">
+                                                            <rect key="frame" x="16" y="66" width="272" height="18"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="gpN-8l-5LN"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="WEJ-PY-ie2" firstAttribute="top" secondItem="3Zm-2T-LDD" secondAttribute="bottom" constant="8" id="0oC-iE-oiM"/>
+                                                        <constraint firstItem="aRO-0H-Hzz" firstAttribute="leading" secondItem="plO-mI-lE0" secondAttribute="trailing" id="48y-v6-fpM"/>
+                                                        <constraint firstItem="BJN-lA-rXz" firstAttribute="top" secondItem="WC4-bJ-Vlq" secondAttribute="top" constant="10" id="8Oc-y5-xHn"/>
+                                                        <constraint firstItem="plO-mI-lE0" firstAttribute="leading" secondItem="inE-Jv-xfS" secondAttribute="trailing" id="BNZ-s5-hGc"/>
+                                                        <constraint firstItem="3Zm-2T-LDD" firstAttribute="top" secondItem="BJN-lA-rXz" secondAttribute="bottom" constant="8" id="Cet-QB-rsn"/>
+                                                        <constraint firstItem="inE-Jv-xfS" firstAttribute="top" secondItem="3Zm-2T-LDD" secondAttribute="bottom" constant="8" id="IOI-Di-6es"/>
+                                                        <constraint firstItem="inE-Jv-xfS" firstAttribute="leading" secondItem="WC4-bJ-Vlq" secondAttribute="leading" constant="20" id="K4c-TT-ES9"/>
+                                                        <constraint firstItem="plO-mI-lE0" firstAttribute="top" secondItem="3Zm-2T-LDD" secondAttribute="bottom" constant="8" id="Mwy-nh-nPm"/>
+                                                        <constraint firstItem="374-6T-frx" firstAttribute="top" secondItem="3Zm-2T-LDD" secondAttribute="bottom" constant="8" id="No0-QI-Oc0"/>
+                                                        <constraint firstAttribute="centerX" secondItem="BJN-lA-rXz" secondAttribute="centerX" id="QQo-Kg-uuo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BZK-eX-mKN" secondAttribute="trailing" constant="16" id="SUd-ZS-x3G"/>
+                                                        <constraint firstItem="BZK-eX-mKN" firstAttribute="leading" secondItem="WC4-bJ-Vlq" secondAttribute="leading" constant="16" id="Vyi-fb-P5I"/>
+                                                        <constraint firstAttribute="trailing" secondItem="k6m-eU-jhx" secondAttribute="trailing" constant="20" id="Yc7-Kl-Nwt"/>
+                                                        <constraint firstItem="WEJ-PY-ie2" firstAttribute="leading" secondItem="374-6T-frx" secondAttribute="trailing" id="ZFy-Jp-d3W"/>
+                                                        <constraint firstItem="aRO-0H-Hzz" firstAttribute="top" secondItem="3Zm-2T-LDD" secondAttribute="bottom" constant="8" id="aQn-tm-IDK"/>
+                                                        <constraint firstItem="3Zm-2T-LDD" firstAttribute="leading" secondItem="WC4-bJ-Vlq" secondAttribute="leading" constant="16" id="iKP-9K-dRS"/>
+                                                        <constraint firstItem="BZK-eX-mKN" firstAttribute="top" secondItem="plO-mI-lE0" secondAttribute="bottom" constant="15" id="n9q-PS-iLW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3Zm-2T-LDD" secondAttribute="trailing" constant="16" id="oXs-ZM-cz7"/>
+                                                        <constraint firstItem="k6m-eU-jhx" firstAttribute="top" secondItem="3Zm-2T-LDD" secondAttribute="bottom" constant="8" id="pOX-GD-SjX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BZK-eX-mKN" secondAttribute="bottom" constant="20" id="wgU-eN-cjh"/>
+                                                        <constraint firstItem="k6m-eU-jhx" firstAttribute="leading" secondItem="WEJ-PY-ie2" secondAttribute="trailing" id="yzG-NX-l3l"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WC4-bJ-Vlq" firstAttribute="bottom" secondItem="54m-9A-o59" secondAttribute="bottomMargin" id="1YZ-Fh-Yqb"/>
+                                                <constraint firstItem="WC4-bJ-Vlq" firstAttribute="leading" secondItem="54m-9A-o59" secondAttribute="leadingMargin" id="40O-fu-2lE"/>
+                                                <constraint firstItem="WC4-bJ-Vlq" firstAttribute="top" secondItem="54m-9A-o59" secondAttribute="topMargin" id="N0v-qO-lGb"/>
+                                                <constraint firstItem="WC4-bJ-Vlq" firstAttribute="trailing" secondItem="54m-9A-o59" secondAttribute="trailingMargin" id="c6o-aB-2by"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaneAbnormalCell" rowHeight="161" id="nRN-yi-T58">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nRN-yi-T58" id="mqG-25-m6F">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nv-6V-Twy" customClass="BorderView">
+                                                    <rect key="frame" x="8" y="56" width="304" height="104"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1g-aH-6HO" userLabel="line">
+                                                            <rect key="frame" x="16" y="30" width="272" height="2"/>
+                                                            <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="2" id="CSg-Zd-IuH"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="航班正常率" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja1-51-ZQ7">
+                                                            <rect key="frame" x="122" y="10" width="60" height="12"/>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="12"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计划架次：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfU-81-IhI">
+                                                            <rect key="frame" x="20" y="40" width="55" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="9Yb-Lb-3Cl"/>
+                                                                <constraint firstAttribute="width" constant="55" id="bGM-wW-bIA"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDS-GV-NNU">
+                                                            <rect key="frame" x="100" y="40" width="22" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="6lB-AI-Yiw"/>
+                                                                <constraint firstAttribute="height" constant="11" id="gaw-pK-sa8"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykb-uM-uVp">
+                                                            <rect key="frame" x="75" y="40" width="25" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="1yx-nJ-QTf"/>
+                                                                <constraint firstAttribute="height" constant="11" id="fdo-1p-si1"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="计划架次：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEl-4t-NW5">
+                                                            <rect key="frame" x="182" y="40" width="55" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="o6s-S9-yhv"/>
+                                                                <constraint firstAttribute="width" constant="55" id="xXA-qB-NW7"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D50-65-HIs">
+                                                            <rect key="frame" x="262" y="40" width="22" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="11" id="JYs-fb-WEM"/>
+                                                                <constraint firstAttribute="width" constant="22" id="kaZ-w0-T0x"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq6-1c-wdn">
+                                                            <rect key="frame" x="237" y="40" width="25" height="11"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="OcS-j3-2Dd"/>
+                                                                <constraint firstAttribute="height" constant="11" id="ucX-w4-Umx"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                            <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nw-yj-bP0" customClass="ProgressBar">
+                                                            <rect key="frame" x="16" y="66" width="272" height="18"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="Vj5-7z-MfO"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="c1g-aH-6HO" secondAttribute="trailing" constant="16" id="0GF-Qf-wke"/>
+                                                        <constraint firstItem="Ykb-uM-uVp" firstAttribute="leading" secondItem="xfU-81-IhI" secondAttribute="trailing" id="15v-sH-B5a"/>
+                                                        <constraint firstAttribute="trailing" secondItem="D50-65-HIs" secondAttribute="trailing" constant="20" id="4lq-au-2Wx"/>
+                                                        <constraint firstItem="SDS-GV-NNU" firstAttribute="leading" secondItem="Ykb-uM-uVp" secondAttribute="trailing" id="78d-3V-UtP"/>
+                                                        <constraint firstItem="gq6-1c-wdn" firstAttribute="leading" secondItem="TEl-4t-NW5" secondAttribute="trailing" id="7SB-sj-HMZ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5nw-yj-bP0" secondAttribute="bottom" constant="20" id="AyF-LE-jsc"/>
+                                                        <constraint firstItem="c1g-aH-6HO" firstAttribute="top" secondItem="ja1-51-ZQ7" secondAttribute="bottom" constant="8" id="DR0-e7-rss"/>
+                                                        <constraint firstItem="ja1-51-ZQ7" firstAttribute="top" secondItem="4nv-6V-Twy" secondAttribute="top" constant="10" id="E6L-mj-6xk"/>
+                                                        <constraint firstItem="SDS-GV-NNU" firstAttribute="top" secondItem="c1g-aH-6HO" secondAttribute="bottom" constant="8" id="KyJ-ib-von"/>
+                                                        <constraint firstItem="TEl-4t-NW5" firstAttribute="top" secondItem="c1g-aH-6HO" secondAttribute="bottom" constant="8" id="Nhd-wy-wn1"/>
+                                                        <constraint firstAttribute="centerX" secondItem="ja1-51-ZQ7" secondAttribute="centerX" id="QmL-lS-961"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5nw-yj-bP0" secondAttribute="trailing" constant="16" id="WNE-cJ-OzR"/>
+                                                        <constraint firstItem="xfU-81-IhI" firstAttribute="leading" secondItem="4nv-6V-Twy" secondAttribute="leading" constant="20" id="Z0s-0x-nUb"/>
+                                                        <constraint firstItem="5nw-yj-bP0" firstAttribute="top" secondItem="Ykb-uM-uVp" secondAttribute="bottom" constant="15" id="b2z-rt-7h1"/>
+                                                        <constraint firstItem="D50-65-HIs" firstAttribute="leading" secondItem="gq6-1c-wdn" secondAttribute="trailing" id="evg-G7-zFQ"/>
+                                                        <constraint firstItem="Ykb-uM-uVp" firstAttribute="top" secondItem="c1g-aH-6HO" secondAttribute="bottom" constant="8" id="hZi-bi-hbv"/>
+                                                        <constraint firstItem="gq6-1c-wdn" firstAttribute="top" secondItem="c1g-aH-6HO" secondAttribute="bottom" constant="8" id="kiw-YD-bcA"/>
+                                                        <constraint firstItem="D50-65-HIs" firstAttribute="top" secondItem="c1g-aH-6HO" secondAttribute="bottom" constant="8" id="rT3-zA-sT0"/>
+                                                        <constraint firstItem="c1g-aH-6HO" firstAttribute="leading" secondItem="4nv-6V-Twy" secondAttribute="leading" constant="16" id="vgb-PD-K5M"/>
+                                                        <constraint firstItem="5nw-yj-bP0" firstAttribute="leading" secondItem="4nv-6V-Twy" secondAttribute="leading" constant="16" id="xTO-8c-esS"/>
+                                                        <constraint firstItem="xfU-81-IhI" firstAttribute="top" secondItem="c1g-aH-6HO" secondAttribute="bottom" constant="8" id="xeG-qd-ooC"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="备改降:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0MS-OD-5gt">
+                                                    <rect key="frame" x="11" y="43" width="37" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWI-J6-cem">
+                                                    <rect key="frame" x="61" y="43" width="22" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oys-zv-kUJ">
+                                                    <rect key="frame" x="54" y="43" width="7" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="延误:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcl-gS-c4q">
+                                                    <rect key="frame" x="11" y="30" width="37" height="11"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="37" id="TsI-vA-USW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq1-dI-i1p">
+                                                    <rect key="frame" x="61" y="30" width="22" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="68" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UU7-qb-FfC">
+                                                    <rect key="frame" x="48" y="30" width="13" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POj-Sh-deJ" customClass="OrangeBorder">
+                                                    <rect key="frame" x="8" y="0.0" width="110" height="25"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="航班异常情况" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hi8-UA-g1w">
+                                                            <rect key="frame" x="8" y="7" width="72" height="12"/>
+                                                            <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="12"/>
+                                                            <color key="textColor" red="0.74901960784313726" green="0.094117647058823528" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.97647058823529409" green="0.80000000000000004" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="hi8-UA-g1w" firstAttribute="leading" secondItem="POj-Sh-deJ" secondAttribute="leading" constant="8" id="24K-an-PC0"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Fus-aY-0OF"/>
+                                                        <constraint firstAttribute="width" constant="110" id="eUW-8T-biW"/>
+                                                        <constraint firstItem="hi8-UA-g1w" firstAttribute="top" secondItem="POj-Sh-deJ" secondAttribute="top" constant="7" id="olo-Qa-QEt"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tH-Zo-AQZ" userLabel="line">
+                                                    <rect key="frame" x="8" y="25" width="304" height="2"/>
+                                                    <color key="backgroundColor" red="0.97254901960784312" green="0.75294117647058822" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="SrX-fv-Yg8"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="返航:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKY-9f-BkZ">
+                                                    <rect key="frame" x="239" y="43" width="26" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTx-BK-Z7t">
+                                                    <rect key="frame" x="290" y="43" width="22" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXZ-t0-FCr">
+                                                    <rect key="frame" x="265" y="43" width="25" height="11"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="x5u-uQ-kef"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取消:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekz-A2-Qf9">
+                                                    <rect key="frame" x="239" y="30" width="26" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="架次" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btH-q8-a1a">
+                                                    <rect key="frame" x="290" y="30" width="22" height="11"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKg-x5-bdB">
+                                                    <rect key="frame" x="265" y="30" width="25" height="11"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="X5U-J3-l3W"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="11"/>
+                                                    <color key="textColor" red="0.094117647060000004" green="0.44705882349999998" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ekz-A2-Qf9" firstAttribute="centerY" secondItem="xKg-x5-bdB" secondAttribute="centerY" id="0vO-3f-PaT"/>
+                                                <constraint firstItem="kTx-BK-Z7t" firstAttribute="leading" secondItem="lXZ-t0-FCr" secondAttribute="trailing" id="4JP-2D-vVH"/>
+                                                <constraint firstItem="kTx-BK-Z7t" firstAttribute="top" secondItem="btH-q8-a1a" secondAttribute="bottom" constant="2" id="4Tv-Ap-7e2"/>
+                                                <constraint firstItem="4tH-Zo-AQZ" firstAttribute="trailing" secondItem="mqG-25-m6F" secondAttribute="trailingMargin" id="5hz-GM-epL"/>
+                                                <constraint firstItem="rKY-9f-BkZ" firstAttribute="centerY" secondItem="lXZ-t0-FCr" secondAttribute="centerY" id="5u3-Gy-3Ad"/>
+                                                <constraint firstItem="btH-q8-a1a" firstAttribute="leading" secondItem="xKg-x5-bdB" secondAttribute="trailing" id="5vC-At-B8i"/>
+                                                <constraint firstItem="kTx-BK-Z7t" firstAttribute="trailing" secondItem="mqG-25-m6F" secondAttribute="trailingMargin" id="62L-YM-Alg"/>
+                                                <constraint firstItem="Pcl-gS-c4q" firstAttribute="centerY" secondItem="Uq1-dI-i1p" secondAttribute="centerY" id="8Vl-9l-04U"/>
+                                                <constraint firstItem="0MS-OD-5gt" firstAttribute="centerY" secondItem="oys-zv-kUJ" secondAttribute="centerY" id="A8s-mK-n96"/>
+                                                <constraint firstItem="lXZ-t0-FCr" firstAttribute="leading" secondItem="rKY-9f-BkZ" secondAttribute="trailing" id="DFf-SM-n6U"/>
+                                                <constraint firstItem="rKY-9f-BkZ" firstAttribute="centerY" secondItem="kTx-BK-Z7t" secondAttribute="centerY" id="DsN-Xb-xLd"/>
+                                                <constraint firstItem="4nv-6V-Twy" firstAttribute="top" secondItem="0MS-OD-5gt" secondAttribute="bottom" constant="2" id="J5L-kI-QaC"/>
+                                                <constraint firstItem="4nv-6V-Twy" firstAttribute="trailing" secondItem="mqG-25-m6F" secondAttribute="trailingMargin" id="Ou5-x9-wLa"/>
+                                                <constraint firstItem="0MS-OD-5gt" firstAttribute="top" secondItem="Pcl-gS-c4q" secondAttribute="bottom" constant="2" id="R2R-Z9-VGQ"/>
+                                                <constraint firstItem="UU7-qb-FfC" firstAttribute="leading" secondItem="Pcl-gS-c4q" secondAttribute="trailing" id="SQp-qt-GXm"/>
+                                                <constraint firstItem="btH-q8-a1a" firstAttribute="trailing" secondItem="mqG-25-m6F" secondAttribute="trailingMargin" id="Urk-eo-oRa"/>
+                                                <constraint firstItem="Uq1-dI-i1p" firstAttribute="leading" secondItem="UU7-qb-FfC" secondAttribute="trailing" id="cg3-V4-kgg"/>
+                                                <constraint firstItem="Uq1-dI-i1p" firstAttribute="centerX" secondItem="VWI-J6-cem" secondAttribute="centerX" id="cha-qn-nai"/>
+                                                <constraint firstItem="ekz-A2-Qf9" firstAttribute="centerY" secondItem="btH-q8-a1a" secondAttribute="centerY" id="dc5-E7-5pM"/>
+                                                <constraint firstItem="VWI-J6-cem" firstAttribute="leading" secondItem="oys-zv-kUJ" secondAttribute="trailing" id="dcX-c2-nAa"/>
+                                                <constraint firstItem="Pcl-gS-c4q" firstAttribute="centerY" secondItem="UU7-qb-FfC" secondAttribute="centerY" id="eHW-lu-wFc"/>
+                                                <constraint firstItem="POj-Sh-deJ" firstAttribute="top" secondItem="mqG-25-m6F" secondAttribute="topMargin" constant="-8" id="ehS-Bl-K2N"/>
+                                                <constraint firstItem="4tH-Zo-AQZ" firstAttribute="leading" secondItem="mqG-25-m6F" secondAttribute="leadingMargin" id="fyE-qq-zcb"/>
+                                                <constraint firstItem="POj-Sh-deJ" firstAttribute="leading" secondItem="mqG-25-m6F" secondAttribute="leadingMargin" id="ien-zy-13X"/>
+                                                <constraint firstItem="Pcl-gS-c4q" firstAttribute="leading" secondItem="mqG-25-m6F" secondAttribute="leadingMargin" constant="3" id="kkG-BQ-YZt"/>
+                                                <constraint firstItem="xKg-x5-bdB" firstAttribute="leading" secondItem="ekz-A2-Qf9" secondAttribute="trailing" id="kwe-vT-cGf"/>
+                                                <constraint firstItem="4tH-Zo-AQZ" firstAttribute="top" secondItem="POj-Sh-deJ" secondAttribute="bottom" id="tOb-gX-DdZ"/>
+                                                <constraint firstItem="btH-q8-a1a" firstAttribute="top" secondItem="4tH-Zo-AQZ" secondAttribute="bottom" constant="3" id="uBA-5X-LX0"/>
+                                                <constraint firstItem="4nv-6V-Twy" firstAttribute="bottom" secondItem="mqG-25-m6F" secondAttribute="bottomMargin" constant="8" id="vKq-ci-x2b"/>
+                                                <constraint firstItem="0MS-OD-5gt" firstAttribute="centerY" secondItem="VWI-J6-cem" secondAttribute="centerY" id="wVk-by-oYT"/>
+                                                <constraint firstItem="4nv-6V-Twy" firstAttribute="leading" secondItem="mqG-25-m6F" secondAttribute="leadingMargin" id="wd4-N6-OQS"/>
+                                                <constraint firstItem="0MS-OD-5gt" firstAttribute="leading" secondItem="mqG-25-m6F" secondAttribute="leadingMargin" constant="3" id="zvD-Mx-QbH"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="21x-Dc-g68">
