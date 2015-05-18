@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B45F4241B09791700D40705 /* Gauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F4231B09791700D40705 /* Gauge.m */; };
+		9B45F4271B097CA300D40705 /* PlanFinishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F4261B097CA300D40705 /* PlanFinishView.m */; };
+		9B45F42A1B09892B00D40705 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F4291B09892B00D40705 /* BorderView.m */; };
 		9BF303071B0590F30006E979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303061B0590F30006E979 /* main.m */; };
 		9BF3030A1B0590F30006E979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303091B0590F30006E979 /* AppDelegate.m */; };
 		9BF3030D1B0590F30006E979 /* ACDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3030B1B0590F30006E979 /* ACDM.xcdatamodeld */; };
@@ -16,6 +19,7 @@
 		9BF303181B0590F30006E979 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BF303161B0590F30006E979 /* LaunchScreen.xib */; };
 		9BF303241B0590F30006E979 /* ACDMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303231B0590F30006E979 /* ACDMTests.m */; };
 		9BF303301B05B1AC0006E979 /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3032F1B05B1AC0006E979 /* BottomView.m */; };
+		9BF303361B05C8700006E979 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303351B05C8700006E979 /* DrawViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B45F4221B09791700D40705 /* Gauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gauge.h; sourceTree = "<group>"; };
+		9B45F4231B09791700D40705 /* Gauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gauge.m; sourceTree = "<group>"; };
+		9B45F4251B097CA300D40705 /* PlanFinishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanFinishView.h; sourceTree = "<group>"; };
+		9B45F4261B097CA300D40705 /* PlanFinishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanFinishView.m; sourceTree = "<group>"; };
+		9B45F4281B09892B00D40705 /* BorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderView.h; sourceTree = "<group>"; };
+		9B45F4291B09892B00D40705 /* BorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderView.m; sourceTree = "<group>"; };
 		9BF303011B0590F30006E979 /* ACDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF303051B0590F30006E979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF303061B0590F30006E979 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,6 +55,8 @@
 		9BF303231B0590F30006E979 /* ACDMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACDMTests.m; sourceTree = "<group>"; };
 		9BF3032E1B05B1AC0006E979 /* BottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
 		9BF3032F1B05B1AC0006E979 /* BottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
+		9BF303341B05C8700006E979 /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
+		9BF303351B05C8700006E979 /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,8 @@
 				9BF3030E1B0590F30006E979 /* ViewController.h */,
 				9BF3030F1B0590F30006E979 /* ViewController.m */,
 				9BF303111B0590F30006E979 /* Main.storyboard */,
+				9BF303341B05C8700006E979 /* DrawViewController.h */,
+				9BF303351B05C8700006E979 /* DrawViewController.m */,
 				9BF303141B0590F30006E979 /* Images.xcassets */,
 				9BF303161B0590F30006E979 /* LaunchScreen.xib */,
 				9BF3030B1B0590F30006E979 /* ACDM.xcdatamodeld */,
@@ -129,8 +143,14 @@
 		9BF3032D1B05B1780006E979 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				9B45F4221B09791700D40705 /* Gauge.h */,
+				9B45F4231B09791700D40705 /* Gauge.m */,
 				9BF3032E1B05B1AC0006E979 /* BottomView.h */,
 				9BF3032F1B05B1AC0006E979 /* BottomView.m */,
+				9B45F4251B097CA300D40705 /* PlanFinishView.h */,
+				9B45F4261B097CA300D40705 /* PlanFinishView.m */,
+				9B45F4281B09892B00D40705 /* BorderView.h */,
+				9B45F4291B09892B00D40705 /* BorderView.m */,
 			);
 			name = Widget;
 			sourceTree = "<group>";
@@ -235,10 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF303361B05C8700006E979 /* DrawViewController.m in Sources */,
+				9B45F42A1B09892B00D40705 /* BorderView.m in Sources */,
 				9BF3030A1B0590F30006E979 /* AppDelegate.m in Sources */,
+				9B45F4271B097CA300D40705 /* PlanFinishView.m in Sources */,
 				9BF3030D1B0590F30006E979 /* ACDM.xcdatamodeld in Sources */,
 				9BF303101B0590F30006E979 /* ViewController.m in Sources */,
 				9BF303301B05B1AC0006E979 /* BottomView.m in Sources */,
+				9B45F4241B09791700D40705 /* Gauge.m in Sources */,
 				9BF303071B0590F30006E979 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +462,7 @@
 				9BF303291B0590F30006E979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BF3032A1B0590F30006E979 /* Build configuration list for PBXNativeTarget "ACDMTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +471,7 @@
 				9BF3032C1B0590F30006E979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

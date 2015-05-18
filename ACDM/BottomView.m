@@ -31,14 +31,14 @@ enum{selected=0,origin};
 }
 
 -(void) leftButtonClicked{
-    [_left setBackgroundColor:_origincolor[selected]];
-    [_right setBackgroundColor:_origincolor[origin]];
+//    [_left setBackgroundColor:_origincolor[selected]];
+//    [_right setBackgroundColor:_origincolor[origin]];
     
 }
 
 -(void) rightButtonClicked{
-    [_left setBackgroundColor:_origincolor[origin]];
-    [_right setBackgroundColor:_origincolor[selected]];
+//    [_left setBackgroundColor:_origincolor[origin]];
+//    [_right setBackgroundColor:_origincolor[selected]];
 }
 
 @end
