@@ -35,7 +35,7 @@
 }
 
 - (IBAction)openMenu:(UIButton *)sender {
-    static int currentMenu = 1;
+    static NSInteger currentMenu = 1;
     
     UIView *curview = [self.view viewWithTag:currentMenu*ViewTag];
     [curview setHidden:YES];
