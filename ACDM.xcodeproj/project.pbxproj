@@ -13,6 +13,8 @@
 		9B45F4301B09A3E700D40705 /* ProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F42F1B09A3E700D40705 /* ProgressBar.m */; };
 		9B45F4351B09B23200D40705 /* OrangeBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F4341B09B23200D40705 /* OrangeBorder.m */; };
 		9B45F43B1B09E00500D40705 /* PillarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F43A1B09E00500D40705 /* PillarGraph.m */; };
+		9B4F976F1B0AE2AE00FC967F /* OperatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4F976E1B0AE2AE00FC967F /* OperatorViewController.m */; };
+		9B4F97721B0B058300FC967F /* SmallBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4F97711B0B058300FC967F /* SmallBorderView.m */; };
 		9BF303071B0590F30006E979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303061B0590F30006E979 /* main.m */; };
 		9BF3030A1B0590F30006E979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303091B0590F30006E979 /* AppDelegate.m */; };
 		9BF3030D1B0590F30006E979 /* ACDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3030B1B0590F30006E979 /* ACDM.xcdatamodeld */; };
@@ -48,6 +50,10 @@
 		9B45F4341B09B23200D40705 /* OrangeBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeBorder.m; sourceTree = "<group>"; };
 		9B45F4391B09E00500D40705 /* PillarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PillarGraph.h; path = ../../testclock/testclock/PillarGraph.h; sourceTree = "<group>"; };
 		9B45F43A1B09E00500D40705 /* PillarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PillarGraph.m; path = ../../testclock/testclock/PillarGraph.m; sourceTree = "<group>"; };
+		9B4F976D1B0AE2AE00FC967F /* OperatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorViewController.h; sourceTree = "<group>"; };
+		9B4F976E1B0AE2AE00FC967F /* OperatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorViewController.m; sourceTree = "<group>"; };
+		9B4F97701B0B058300FC967F /* SmallBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallBorderView.h; sourceTree = "<group>"; };
+		9B4F97711B0B058300FC967F /* SmallBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallBorderView.m; sourceTree = "<group>"; };
 		9BF303011B0590F30006E979 /* ACDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF303051B0590F30006E979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF303061B0590F30006E979 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +125,8 @@
 				9BF303161B0590F30006E979 /* LaunchScreen.xib */,
 				9BF3030B1B0590F30006E979 /* ACDM.xcdatamodeld */,
 				9BF303041B0590F30006E979 /* Supporting Files */,
+				9B4F976D1B0AE2AE00FC967F /* OperatorViewController.h */,
+				9B4F976E1B0AE2AE00FC967F /* OperatorViewController.m */,
 			);
 			path = ACDM;
 			sourceTree = "<group>";
@@ -166,6 +174,8 @@
 				9B45F4291B09892B00D40705 /* BorderView.m */,
 				9B45F4331B09B23200D40705 /* OrangeBorder.h */,
 				9B45F4341B09B23200D40705 /* OrangeBorder.m */,
+				9B4F97701B0B058300FC967F /* SmallBorderView.h */,
+				9B4F97711B0B058300FC967F /* SmallBorderView.m */,
 			);
 			name = Widget;
 			sourceTree = "<group>";
@@ -270,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4F976F1B0AE2AE00FC967F /* OperatorViewController.m in Sources */,
 				9BF303361B05C8700006E979 /* DrawViewController.m in Sources */,
 				9B45F42A1B09892B00D40705 /* BorderView.m in Sources */,
 				9BF3030A1B0590F30006E979 /* AppDelegate.m in Sources */,
@@ -281,6 +292,7 @@
 				9B45F4351B09B23200D40705 /* OrangeBorder.m in Sources */,
 				9BF303301B05B1AC0006E979 /* BottomView.m in Sources */,
 				9B45F4241B09791700D40705 /* Gauge.m in Sources */,
+				9B4F97721B0B058300FC967F /* SmallBorderView.m in Sources */,
 				9BF303071B0590F30006E979 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
