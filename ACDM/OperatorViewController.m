@@ -8,6 +8,8 @@
 
 #import "OperatorViewController.h"
 
+#define ViewTag 10
+
 @interface OperatorViewController ()
 @property (weak, nonatomic) IBOutlet UIView *menuView;
 
@@ -31,13 +33,14 @@
 - (IBAction)planeSearch:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 - (IBAction)openMenu:(UIButton *)sender {
     static int currentMenu = 1;
     
-    UIView *curview = [self.view viewWithTag:currentMenu];
+    UIView *curview = [self.view viewWithTag:currentMenu*ViewTag];
     [curview setHidden:YES];
     
-    UIView *view = [self.view viewWithTag:[sender tag]];
+    UIView *view = [self.view viewWithTag:[sender tag]*ViewTag];
     [view setHidden:NO];
     currentMenu = [sender tag];
     
