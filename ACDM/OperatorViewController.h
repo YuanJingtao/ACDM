@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Gauge.h"
+#import "ProgressBar.h"
+#import "PillarGraph.h"
 
 @interface OperatorViewController : UIViewController
 

@@ -35,8 +35,7 @@
     [_label setTextColor:[UIColor colorWithRed:0 green:0.478431 blue:1 alpha:1]];
     _label.frame = CGRectMake(width/2-15, 4, 30, height-8);
     [self addSubview:_label];
-    
-    [self setProgress:1.0f];
+
 }
 
 
