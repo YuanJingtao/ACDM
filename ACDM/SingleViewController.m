@@ -9,6 +9,8 @@
 #import "SingleViewController.h"
 
 @interface SingleViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+- (IBAction)toFirstView:(UIButton *)sender;
 
 @end
 
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _rightButton.layer.borderWidth = 1.0;
+    _rightButton.layer.borderColor = [UIColor blackColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +38,7 @@
 }
 */
 
+- (IBAction)toFirstView:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
 @end

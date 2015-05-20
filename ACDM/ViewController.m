@@ -11,6 +11,8 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *detailVIew;
 @property (weak, nonatomic) IBOutlet UIView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+- (IBAction)toFirstView:(UIButton *)sender;
 
 @end
 
@@ -20,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    _rightButton.layer.borderWidth = 1.0;
+    _rightButton.layer.borderColor = [UIColor blackColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,4 +71,7 @@
     
 }
 
+- (IBAction)toFirstView:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
 @end

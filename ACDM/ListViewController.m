@@ -10,6 +10,9 @@
 
 @interface ListViewController ()
 
+- (IBAction)toFIrstView:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+
 @end
 
 @implementation ListViewController
@@ -17,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _rightButton.layer.borderWidth = 1.0;
+    _rightButton.layer.borderColor = [UIColor blackColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +39,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 10;
 }
 
 
@@ -64,4 +69,7 @@
 }
 */
 
+- (IBAction)toFIrstView:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
 @end

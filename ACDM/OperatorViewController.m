@@ -11,6 +11,7 @@
 #define ViewTag 10
 
 @interface OperatorViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *leftButton;
 @property (weak, nonatomic) IBOutlet UIView *menuView;
 
 @property (weak, nonatomic) IBOutlet UILabel *view5Label;
@@ -34,8 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationItem setHidesBackButton:YES];
     
+    _leftButton.layer.borderWidth = 1.0;
+    _leftButton.layer.borderColor = [UIColor blackColor].CGColor;
 }
 
 //控件初值设置写到这里
@@ -75,7 +77,7 @@
 }
 
 - (IBAction)planeSearch:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    // [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)openMenu:(UIButton *)sender {

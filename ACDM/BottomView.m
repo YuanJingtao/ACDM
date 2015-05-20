@@ -28,6 +28,8 @@ enum{selected=0,origin};
     [_right addTarget:self action:@selector(rightButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     
     _origincolor = [NSArray arrayWithObjects:_left.backgroundColor,_right.backgroundColor, nil];
+    
+    
 }
 
 -(void) leftButtonClicked{

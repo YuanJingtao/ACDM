@@ -9,7 +9,6 @@
         <!--Navigation Controller-->
         <scene sceneID="YdK-ET-gA1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g6E-F1-DWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="OAa-J1-v5H" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E03-em-NdO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -20,16 +19,16 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Vn2-RF-Q9g"/>
+                        <segue destination="4i6-oF-hxE" kind="relationship" relationship="rootViewController" id="HPa-Jc-5iA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6E-F1-DWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-230" y="331"/>
         </scene>
         <!--航班查询-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
@@ -470,22 +469,22 @@
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dT-lD-qQ4">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="35"/>
-                                        <color key="backgroundColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="航班查询">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCc-sE-FyQ">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="35"/>
                                         <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="运营情况">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="4i6-oF-hxE" kind="push" id="qPn-7V-p0r"/>
+                                            <action selector="toFirstView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oyD-T9-GMA"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCc-sE-FyQ">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="35"/>
+                                        <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="航班查询">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32459877896720157" green="1" blue="0.25161245280018352" alpha="1" colorSpace="calibratedRGB"/>
@@ -522,18 +521,19 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="detailVIew" destination="5Ll-XT-Su8" id="o8T-MN-gG8"/>
+                        <outlet property="rightButton" destination="aCc-sE-FyQ" id="AyU-RH-usO"/>
                         <outlet property="tableView" destination="8tU-8P-3O4" id="Lt0-2b-0Bs"/>
                         <segue destination="BU6-rr-KlO" kind="push" identifier="SingleSegue" id="VpB-7S-EzX"/>
                         <segue destination="Vzr-U5-iTa" kind="push" identifier="ListSegue" id="ZHW-EA-NMj"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="331"/>
+            <point key="canvasLocation" x="567" y="331"/>
         </scene>
         <!--MU1668-->
         <scene sceneID="emM-v7-tjM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Yd-Ky-TNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="BU6-rr-KlO" customClass="SingleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t5C-Pw-XG5"/>
@@ -807,17 +807,20 @@
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82k-c6-tgb">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="35"/>
-                                        <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="航班查询">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urU-dQ-MQ9">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="35"/>
                                         <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="运营情况">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toFirstView:" destination="BU6-rr-KlO" eventType="touchUpInside" id="ChR-Ze-4IA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urU-dQ-MQ9">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="35"/>
+                                        <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="航班查询">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -850,14 +853,17 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="MU1668" id="f6H-d8-bpv"/>
+                    <connections>
+                        <outlet property="rightButton" destination="urU-dQ-MQ9" id="brc-6O-LRO"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Yd-Ky-TNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="123" y="1107"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="UlD-hc-ShI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ovF-gw-q02" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Vzr-U5-iTa" customClass="ListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TJI-jp-2Rm"/>
@@ -1010,21 +1016,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SO2-uH-MiT" userLabel="Bottom" customClass="BottomView">
                                 <rect key="frame" x="0.0" y="469" width="320" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58i-Az-n9a">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="35"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-hw-deJ">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="35"/>
                                         <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="航班查询">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-hw-deJ">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="35"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58i-Az-n9a">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="35"/>
                                         <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="运营情况">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="toFIrstView:" destination="Vzr-U5-iTa" eventType="touchUpInside" id="ggZ-xO-C6l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.324598779" green="1" blue="0.2516124528" alpha="1" colorSpace="calibratedRGB"/>
@@ -1059,23 +1068,24 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="syq-qH-Dl7"/>
                     <connections>
+                        <outlet property="rightButton" destination="7fj-hw-deJ" id="zVw-yB-dD3"/>
                         <segue destination="BU6-rr-KlO" kind="push" identifier="DetailSegue" id="z6Q-La-H3c"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovF-gw-q02" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="659" y="1107"/>
         </scene>
         <!--运营情况-->
         <scene sceneID="oAo-HG-Qu7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rfy-Uk-lIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4i6-oF-hxE" customClass="OperatorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FI7-iV-7w3"/>
                         <viewControllerLayoutGuide type="bottom" id="bJG-fO-7BZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rI0-sb-ht3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" tag="80" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jN9-EZ-Jo3" userLabel="View8">
@@ -2692,10 +2702,11 @@
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUM-0s-Whb">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="35"/>
-                                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="航班查询">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="运营情况"/>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="planeSearch:" destination="4i6-oF-hxE" eventType="touchUpInside" id="T6A-Xe-Kxp"/>
@@ -2703,11 +2714,14 @@
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0o-NO-cHQ">
                                         <rect key="frame" x="160" y="0.0" width="160" height="35"/>
-                                        <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="运营情况">
+                                        <state key="normal" title="航班查询">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="push" id="rsb-xg-UwA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.324598779" green="1" blue="0.2516124528" alpha="1" colorSpace="calibratedRGB"/>
@@ -2899,8 +2913,8 @@
                             <constraint firstItem="md9-1j-ZuJ" firstAttribute="leading" secondItem="rI0-sb-ht3" secondAttribute="leading" id="B4x-b2-HeI"/>
                             <constraint firstItem="fek-PE-0nG" firstAttribute="top" secondItem="FI7-iV-7w3" secondAttribute="bottom" constant="8" id="BI3-jB-idm"/>
                             <constraint firstAttribute="trailing" secondItem="baO-Ah-zwr" secondAttribute="trailing" id="CDb-GF-XYv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7Xk-31-ir9" secondAttribute="trailing" constant="-16" id="CSW-Kv-Zbx"/>
                             <constraint firstAttribute="trailing" secondItem="ory-X3-GEe" secondAttribute="trailing" id="E6K-uO-0K7"/>
+                            <constraint firstItem="7Xk-31-ir9" firstAttribute="leading" secondItem="rI0-sb-ht3" secondAttribute="leading" id="G1o-QV-3iG"/>
                             <constraint firstItem="7Xk-31-ir9" firstAttribute="top" secondItem="fbu-P3-qxa" secondAttribute="bottom" constant="8" id="GD4-PZ-Bgv"/>
                             <constraint firstAttribute="trailing" secondItem="fbu-P3-qxa" secondAttribute="trailing" id="HtP-pW-PEc"/>
                             <constraint firstItem="ory-X3-GEe" firstAttribute="leading" secondItem="rI0-sb-ht3" secondAttribute="leading" id="Iqr-db-ZvZ"/>
@@ -2911,8 +2925,8 @@
                             <constraint firstAttribute="width" secondItem="Y7H-vI-HRE" secondAttribute="width" id="LMi-Tq-Mo7"/>
                             <constraint firstItem="fbu-P3-qxa" firstAttribute="top" secondItem="FI7-iV-7w3" secondAttribute="bottom" constant="8" id="LnP-HI-vH2"/>
                             <constraint firstItem="bJG-fO-7BZ" firstAttribute="top" secondItem="cFg-Dx-qBJ" secondAttribute="bottom" constant="81" id="PxL-2N-Fmj"/>
-                            <constraint firstItem="7Xk-31-ir9" firstAttribute="leading" secondItem="rI0-sb-ht3" secondAttribute="leadingMargin" constant="-16" id="QNj-4E-7fr"/>
                             <constraint firstItem="aIx-XY-Kkl" firstAttribute="leading" secondItem="rI0-sb-ht3" secondAttribute="leading" id="THN-JI-8Yw"/>
+                            <constraint firstAttribute="trailing" secondItem="7Xk-31-ir9" secondAttribute="trailing" id="ThQ-rC-87E"/>
                             <constraint firstItem="jN9-EZ-Jo3" firstAttribute="leading" secondItem="rI0-sb-ht3" secondAttribute="leading" id="U44-wx-HJz"/>
                             <constraint firstItem="B48-cW-kFI" firstAttribute="leading" secondItem="rI0-sb-ht3" secondAttribute="leading" id="V7X-zg-Nd5"/>
                             <constraint firstItem="7Xk-31-ir9" firstAttribute="top" secondItem="baO-Ah-zwr" secondAttribute="bottom" constant="8" id="aYc-Dd-xXO"/>
@@ -2934,6 +2948,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="运营情况" id="ApI-gR-4DX"/>
                     <connections>
+                        <outlet property="leftButton" destination="YUM-0s-Whb" id="m7d-UC-zU8"/>
                         <outlet property="menuView" destination="cFg-Dx-qBJ" id="vcC-CG-zhZ"/>
                         <outlet property="view1Gauge" destination="E7A-xi-VBZ" id="2a6-SM-sJb"/>
                         <outlet property="view1ProgressBar" destination="sb1-Mr-m0P" id="vWT-K1-1Gt"/>
@@ -2947,8 +2962,9 @@
                         <outlet property="view7Gauge2" destination="7ia-HM-2Ny" id="kq8-an-BLW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfy-Uk-lIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="330"/>
+            <point key="canvasLocation" x="151" y="331"/>
         </scene>
     </scenes>
     <resources>
