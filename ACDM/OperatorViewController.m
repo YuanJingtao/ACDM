@@ -13,6 +13,8 @@
 @interface OperatorViewController ()
 @property (weak, nonatomic) IBOutlet UIView *menuView;
 
+@property (weak, nonatomic) IBOutlet UILabel *view5Label;
+
 
 @end
 
@@ -23,6 +25,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationItem setHidesBackButton:YES];
+    
+    NSString *labletext = @"\t浦东机场昨日计划xxx架次，\n\t实际执行xxx架次(进港航班xxx架次、出港航班xxx架次；其中，全货机xxx架次、公务机xx架次），\n\t出港旅客(暂无数据)，\n\t放行正常率xxx%；\n\t今日计划xxxx架次，\n\t公务机xx架次，\n\t目前机场适航。\n\t\t2015.xx.xx【浦东AOC】";
+    _view5Label.text = labletext;
 }
 
 - (void)didReceiveMemoryWarning {

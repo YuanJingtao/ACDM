@@ -610,11 +610,10 @@
                                 <rect key="frame" x="0.0" y="8" width="320" height="453"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdp-EW-1gt" customClass="BorderView">
-                                        <rect key="frame" x="16" y="16" width="288" height="185"/>
+                                        <rect key="frame" x="16" y="16" width="288" height="26"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf3-Bj-aGf">
-                                                <rect key="frame" x="13" y="13" width="262" height="159"/>
-                                                <string key="text">浦东机场昨日计划xxx架次，实际执行xxx架次(进港航班xxx架次、出港航班xxx架次；其中，全货机xxx架次、公务机xx架次），出港旅客(暂无数据)，放行正常率xxx%；今日计划xxxx架次，公务机xx架次，目前机场适航。2015.xx.xx【浦东AOC】</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf3-Bj-aGf">
+                                                <rect key="frame" x="13" y="13" width="262" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1779,6 +1778,7 @@
                     <navigationItem key="navigationItem" title="运营情况" id="ApI-gR-4DX"/>
                     <connections>
                         <outlet property="menuView" destination="cFg-Dx-qBJ" id="vcC-CG-zhZ"/>
+                        <outlet property="view5Label" destination="hf3-Bj-aGf" id="Teh-bB-b2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfy-Uk-lIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
