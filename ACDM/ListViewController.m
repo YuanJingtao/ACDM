@@ -1,26 +1,22 @@
 //
-//  ViewController.m
+//  ListViewController.m
 //  ACDM
 //
-//  Created by LiJunliang on 15/5/15.
+//  Created by LiJunliang on 15/5/20.
 //  Copyright (c) 2015年 wondersgroup. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ListViewController.h"
 
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIView *detailVIew;
-@property (weak, nonatomic) IBOutlet UIView *tableView;
+@interface ListViewController ()
 
 @end
 
-@implementation ViewController
-
+@implementation ListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,17 +24,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)searchButton:(id)sender {
-    static BOOL flag = YES;
-    if (flag) {
-        [self performSegueWithIdentifier:@"SingleSegue" sender:nil];
-    }
-    else{
-        [self performSegueWithIdentifier:@"ListSegue" sender:nil];
-    }
-    flag = !flag;
-    
-}
 
 #pragma mark - Table view data source
 
@@ -65,7 +50,18 @@
 //点击cell时传递行数
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self performSegueWithIdentifier:@"DetailSegue" sender:nil];
 }
+
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

@@ -15,6 +15,9 @@
 		9B45F43B1B09E00500D40705 /* PillarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B45F43A1B09E00500D40705 /* PillarGraph.m */; };
 		9B4F976F1B0AE2AE00FC967F /* OperatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4F976E1B0AE2AE00FC967F /* OperatorViewController.m */; };
 		9B4F97721B0B058300FC967F /* SmallBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4F97711B0B058300FC967F /* SmallBorderView.m */; };
+		9B4F977E1B0C39B400FC967F /* BorderWidthSmall.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4F977D1B0C39B400FC967F /* BorderWidthSmall.m */; };
+		9B4F97811B0C405500FC967F /* SingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4F97801B0C405500FC967F /* SingleViewController.m */; };
+		9B4F97841B0C406B00FC967F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4F97831B0C406B00FC967F /* ListViewController.m */; };
 		9BF303071B0590F30006E979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303061B0590F30006E979 /* main.m */; };
 		9BF3030A1B0590F30006E979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF303091B0590F30006E979 /* AppDelegate.m */; };
 		9BF3030D1B0590F30006E979 /* ACDM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3030B1B0590F30006E979 /* ACDM.xcdatamodeld */; };
@@ -53,6 +56,12 @@
 		9B4F976E1B0AE2AE00FC967F /* OperatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorViewController.m; sourceTree = "<group>"; };
 		9B4F97701B0B058300FC967F /* SmallBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallBorderView.h; sourceTree = "<group>"; };
 		9B4F97711B0B058300FC967F /* SmallBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallBorderView.m; sourceTree = "<group>"; };
+		9B4F977C1B0C39B400FC967F /* BorderWidthSmall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderWidthSmall.h; sourceTree = "<group>"; };
+		9B4F977D1B0C39B400FC967F /* BorderWidthSmall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderWidthSmall.m; sourceTree = "<group>"; };
+		9B4F977F1B0C405500FC967F /* SingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleViewController.h; sourceTree = "<group>"; };
+		9B4F97801B0C405500FC967F /* SingleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleViewController.m; sourceTree = "<group>"; };
+		9B4F97821B0C406B00FC967F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		9B4F97831B0C406B00FC967F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		9BF303011B0590F30006E979 /* ACDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF303051B0590F30006E979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF303061B0590F30006E979 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +119,8 @@
 		9BF303031B0590F30006E979 /* ACDM */ = {
 			isa = PBXGroup;
 			children = (
+				9B4F977F1B0C405500FC967F /* SingleViewController.h */,
+				9B4F97801B0C405500FC967F /* SingleViewController.m */,
 				9BF3032D1B05B1780006E979 /* Widget */,
 				9BF303081B0590F30006E979 /* AppDelegate.h */,
 				9BF303091B0590F30006E979 /* AppDelegate.m */,
@@ -122,6 +133,8 @@
 				9BF303041B0590F30006E979 /* Supporting Files */,
 				9B4F976D1B0AE2AE00FC967F /* OperatorViewController.h */,
 				9B4F976E1B0AE2AE00FC967F /* OperatorViewController.m */,
+				9B4F97821B0C406B00FC967F /* ListViewController.h */,
+				9B4F97831B0C406B00FC967F /* ListViewController.m */,
 			);
 			path = ACDM;
 			sourceTree = "<group>";
@@ -171,6 +184,8 @@
 				9B45F4341B09B23200D40705 /* OrangeBorder.m */,
 				9B4F97701B0B058300FC967F /* SmallBorderView.h */,
 				9B4F97711B0B058300FC967F /* SmallBorderView.m */,
+				9B4F977C1B0C39B400FC967F /* BorderWidthSmall.h */,
+				9B4F977D1B0C39B400FC967F /* BorderWidthSmall.m */,
 			);
 			name = Widget;
 			sourceTree = "<group>";
@@ -277,6 +292,7 @@
 			files = (
 				9B4F976F1B0AE2AE00FC967F /* OperatorViewController.m in Sources */,
 				9B45F42A1B09892B00D40705 /* BorderView.m in Sources */,
+				9B4F97811B0C405500FC967F /* SingleViewController.m in Sources */,
 				9BF3030A1B0590F30006E979 /* AppDelegate.m in Sources */,
 				9B45F4271B097CA300D40705 /* PlanFinishView.m in Sources */,
 				9B45F4301B09A3E700D40705 /* ProgressBar.m in Sources */,
@@ -284,7 +300,9 @@
 				9B45F43B1B09E00500D40705 /* PillarGraph.m in Sources */,
 				9BF303101B0590F30006E979 /* ViewController.m in Sources */,
 				9B45F4351B09B23200D40705 /* OrangeBorder.m in Sources */,
+				9B4F97841B0C406B00FC967F /* ListViewController.m in Sources */,
 				9BF303301B05B1AC0006E979 /* BottomView.m in Sources */,
+				9B4F977E1B0C39B400FC967F /* BorderWidthSmall.m in Sources */,
 				9B45F4241B09791700D40705 /* Gauge.m in Sources */,
 				9B4F97721B0B058300FC967F /* SmallBorderView.m in Sources */,
 				9BF303071B0590F30006E979 /* main.m in Sources */,
