@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;
 - (IBAction)toFirstView:(UIButton *)sender;
+- (IBAction)segmentChange:(UISegmentedControl *)sender;
 
 @end
 
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.navigationItem setHidesBackButton:YES];
     _rightButton.layer.borderWidth = 1.0;
     _rightButton.layer.borderColor = [UIColor blackColor].CGColor;
 }
@@ -73,5 +75,12 @@
 
 - (IBAction)toFirstView:(UIButton *)sender {
     [self.navigationController popToRootViewControllerAnimated:NO];
+}
+
+- (IBAction)segmentChange:(UISegmentedControl *)sender {
+    if ([sender selectedSegmentIndex]==0) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        [sender setSelectedSegmentIndex:1];
+    }
 }
 @end
