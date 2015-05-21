@@ -565,6 +565,7 @@
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jnq-Xr-PNM">
                                         <rect key="frame" x="114" y="9" width="60" height="43"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="0Ao-Gi-F8S"/>
                                             <constraint firstAttribute="width" constant="60" id="VW9-Yl-9kZ"/>
@@ -957,6 +958,7 @@
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KBC-Na-rrL">
                                                             <rect key="frame" x="202" y="8" width="60" height="21"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="JqC-EK-bxm"/>
                                                                 <constraint firstAttribute="width" constant="60" id="wVY-Ao-h4u"/>
@@ -1103,6 +1105,7 @@
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ji7-Iq-esO">
                                                 <rect key="frame" x="8" y="7" width="20" height="20"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="Bgn-gd-Mmh"/>
                                                     <constraint firstAttribute="height" constant="20" id="Tbd-Nh-noM"/>
@@ -1163,6 +1166,7 @@
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xSJ-cw-VII">
                                                 <rect key="frame" x="8" y="7" width="20" height="20"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="0sH-xz-5Pn"/>
                                                     <constraint firstAttribute="height" constant="20" id="5nR-te-PQt"/>
@@ -1223,6 +1227,7 @@
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hr4-DL-sDx">
                                                 <rect key="frame" x="8" y="7" width="20" height="20"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="19x-lD-KG7"/>
                                                     <constraint firstAttribute="height" constant="20" id="WcQ-h1-kI4"/>
@@ -1283,6 +1288,7 @@
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9x8-cl-JiY">
                                                 <rect key="frame" x="8" y="7" width="20" height="20"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="AOH-Bd-vpa"/>
                                                     <constraint firstAttribute="width" constant="20" id="qBL-N1-C73"/>
@@ -1343,6 +1349,7 @@
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OeQ-qj-eMp">
                                                 <rect key="frame" x="8" y="7" width="20" height="20"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="rwB-6v-g9u"/>
                                                     <constraint firstAttribute="width" constant="20" id="w1Z-lt-01X"/>
