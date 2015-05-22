@@ -8,12 +8,23 @@
 
 #import "ViewController.h"
 
+static int currentPickerView;
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *detailVIew;
 @property (weak, nonatomic) IBOutlet UIView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;
 - (IBAction)toFirstView:(UIButton *)sender;
 - (IBAction)segmentChange:(UISegmentedControl *)sender;
+- (IBAction)popDate:(UITextField *)sender;
+- (IBAction)popTime:(UITextField *)sender;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *datePickerViewLayout;
+- (IBAction)finishButtonClick:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePickerView;
+@property (weak, nonatomic) IBOutlet UITextField *dateLabel;
+@property (weak, nonatomic) IBOutlet UITextField *timeLabel;
+
+enum {Date=0,Time};
 
 @end
 
@@ -26,6 +37,7 @@
     [self.navigationItem setHidesBackButton:YES];
     _rightButton.layer.borderWidth = 1.0;
     _rightButton.layer.borderColor = [UIColor blackColor].CGColor;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,5 +94,58 @@
         [self.navigationController popToRootViewControllerAnimated:NO];
         [sender setSelectedSegmentIndex:1];
     }
+}
+
+
+- (IBAction)popDate:(UITextField *)sender {
+    [_datePickerView setDatePickerMode:UIDatePickerModeDate];
+    
+   // _datePickerView.maximumDate = [NSDate date];
+    
+    _datePickerViewLayout.constant = 35;
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        [self.view layoutIfNeeded];
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    currentPickerView = Date;
+}
+
+- (IBAction)popTime:(UITextField *)sender {
+    [_datePickerView setDatePickerMode:UIDatePickerModeTime];
+    _datePickerViewLayout.constant = 35;
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        [self.view layoutIfNeeded];
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    currentPickerView = Time;
+
+}
+- (IBAction)finishButtonClick:(UIBarButtonItem *)sender {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    if (currentPickerView == Date) {
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        _dateLabel.text = [formatter stringFromDate:_datePickerView.date];
+        
+    }
+    else
+    {
+        [formatter setDateFormat:@"HH:mm"];
+        _timeLabel.text = [formatter stringFromDate:_datePickerView.date];
+    }
+    _datePickerViewLayout.constant = -300;
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        [self.view layoutIfNeeded];
+        
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 @end
