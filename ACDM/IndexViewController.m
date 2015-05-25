@@ -23,6 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //设置透明
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"topBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
+//    //设置
+//    [self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:@"topBarBackground.png"]];
+
 }
 
 - (void)didReceiveMemoryWarning {
