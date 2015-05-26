@@ -9,9 +9,7 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
-@property (weak, nonatomic) IBOutlet Gauge *view1Gauge;
-@property (weak, nonatomic) IBOutlet ProgressBar *view1ProgressBar;
-@property (weak, nonatomic) IBOutlet ProgressBar *view1ProgressBar2;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -20,20 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //设置透明
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"topBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:@"topBarBackground.png"]];
+    
+    NSString *urlString = @"http://www.baidu.com";
+    
+    NSURL *url =[NSURL URLWithString:urlString];
+    NSLog(urlString);
+    NSURLRequest *request =[NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+    //[self.navigationItem setHidesBackButton:YES];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-//控件初值设置写到这里
--(void)viewDidAppear:(BOOL)animated
-{
-    //init view1
-    [_view1Gauge setNum:0.5];
-    [_view1ProgressBar setProgress:0.76];
-    [_view1ProgressBar2 setProgress:0.4];
 }
 
 

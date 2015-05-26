@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ProgressBar.h"
-#import "Gauge.h"
-
 @interface FirstViewController : UIViewController
 
 @end

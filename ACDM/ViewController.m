@@ -40,6 +40,17 @@ enum {Date=0,Time};
     
 }
 
+- (void)loadData
+{
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSString *json = [def valueForKey:@"Json"];
+    NSData *jsonData = [json dataUsingEncoding: NSUTF8StringEncoding];
+    
+    NSError *error = nil;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:&error];
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

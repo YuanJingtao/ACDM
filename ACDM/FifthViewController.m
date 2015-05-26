@@ -25,11 +25,11 @@
     // Dispose of any resources that can be recreated.
 }
 //控件初值设置写到这里
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
 
     //init view5
-    NSString *labletext = @"\t浦东机场昨日计划xxx架次，\n\t实际执行xxx架次(进港航班xxx架次、出港航班xxx架次；其中，全货机xxx架次、公务机xx架次），\n\t出港旅客(暂无数据)，\n\t放行正常率xxx%；\n\t今日计划xxxx架次，\n\t公务机xx架次，\n\t目前机场适航。\n\t\t2015.xx.xx【浦东AOC】";
+    NSString *labletext = @"\t浦东机场昨日计划xxx架次，\n\t实际执行xxx架次(进港航班xxx架次、出港航班xxx架次；其中，全货机xxx架次、公务机xx架次），\n\t出港旅客(暂无数据)，\n\t放行正常率xxx%；\n\t今日\n\t计划xxxx架次，\n\t公务机xx架次，\n\t目前机场适航。\n\t\t2015.xx.xx【浦东AOC】";
     _view5Label.text = labletext;
     
   }
