@@ -10,8 +10,6 @@
 
 @interface ListViewController ()
 
-- (IBAction)toFIrstView:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UIButton *rightButton;
 
 @end
 
@@ -20,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _rightButton.layer.borderWidth = 1.0;
-    _rightButton.layer.borderColor = [UIColor blackColor].CGColor;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +42,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlaneCell"];
+    UITableViewCell *cell;
+    switch (indexPath.row%2) {
+        case 0:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"PlaneCell1"];
+            break;
+        case 1:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"PlaneCell2"];
+            break;
+        default:
+            break;
+    }
     
     // Configure the cell...
     
@@ -60,16 +67,13 @@
 
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)toFIrstView:(UIButton *)sender {
-    [self.navigationController popToRootViewControllerAnimated:NO];
-}
 @end

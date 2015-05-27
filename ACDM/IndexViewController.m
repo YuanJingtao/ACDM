@@ -10,17 +10,13 @@
 
 @interface IndexViewController ()
 - (IBAction)buttonClicked:(UIButton *)sender;
-
-
+@property  NSDictionary *originText;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewLayout;
+@property (nonatomic) dispatch_source_t timer;
 @end
 
 @implementation IndexViewController
-- (IBAction)segmentChanged:(UISegmentedControl *)sender {
-    if ([sender selectedSegmentIndex] == 1) {
-        [self performSegueWithIdentifier:@"SelectSegue" sender:nil];
-        [sender setSelectedSegmentIndex:0];
-    }
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,8 +25,39 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"topBarBackground.png"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage imageNamed:@"topBarBackground.png"]];
     
+    self.originText = [self.navigationController.navigationBar titleTextAttributes];
+    
+    [self.navigationController.navigationBar setTintColor:
+     [UIColor  whiteColor]];
+    
+    //适应scrollView
+    self.scrollViewLayout.constant += self.scrollView.frame.size.height/16*16-(int)self.scrollView.frame.size.height/16*16;
     
     
+    //gdc循环队列
+    dispatch_queue_t queue = dispatch_queue_create("my queue", NULL);
+    
+    _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    
+    dispatch_source_set_timer(_timer, dispatch_walltime(DISPATCH_TIME_NOW, 0), 2*NSEC_PER_SEC, 0);
+    
+    dispatch_source_set_event_handler(_timer, ^{
+        int pagesize = (int)(self.scrollView.frame.size.height/16)*16;
+        CGPoint position = CGPointMake(0, self.scrollView.contentOffset.y+pagesize);
+        if(position.y>self.scrollView.contentSize.height)
+        {
+            position.y = 0;
+        }
+        [self.scrollView setContentOffset:position animated:YES];
+    });
+    dispatch_resume(_timer);
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setTitleTextAttributes:self.originText];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,11 +74,12 @@
  // Pass the selected object to the new view controller.
  }
  */
+- (IBAction)toSearchView:(UIButton *)sender {
+    
+}
 
 - (IBAction)buttonClicked:(UIButton *)sender {
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc]init];
-    
-    [self.navigationController.navigationBar setTintColor:[UIColor  whiteColor]];
     
     switch ([sender tag]) {
         case 1:
@@ -81,7 +109,6 @@
         default:
             break;
     }
-    
     
     [self.navigationItem setBackBarButtonItem:bbi];
 }

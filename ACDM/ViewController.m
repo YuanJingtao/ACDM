@@ -11,11 +11,11 @@
 static int currentPickerView;
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIView *detailVIew;
+
 @property (weak, nonatomic) IBOutlet UIView *tableView;
-@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+
 - (IBAction)toFirstView:(UIButton *)sender;
-- (IBAction)segmentChange:(UISegmentedControl *)sender;
+
 - (IBAction)popDate:(UITextField *)sender;
 - (IBAction)popTime:(UITextField *)sender;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *datePickerViewLayout;
@@ -35,9 +35,8 @@ enum {Date=0,Time};
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.navigationItem setHidesBackButton:YES];
-    _rightButton.layer.borderWidth = 1.0;
-    _rightButton.layer.borderColor = [UIColor blackColor].CGColor;
-    
+    NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:attributes];
 }
 
 - (void)loadData
@@ -98,14 +97,9 @@ enum {Date=0,Time};
 
 - (IBAction)toFirstView:(UIButton *)sender {
     [self.navigationController popToRootViewControllerAnimated:NO];
+    
 }
 
-- (IBAction)segmentChange:(UISegmentedControl *)sender {
-    if ([sender selectedSegmentIndex]==0) {
-        [self.navigationController popToRootViewControllerAnimated:NO];
-        [sender setSelectedSegmentIndex:1];
-    }
-}
 
 
 - (IBAction)popDate:(UITextField *)sender {
