@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SingleViewController : UIViewController
-
+@property NSArray *array;
+@property NSString *id_;
 @end

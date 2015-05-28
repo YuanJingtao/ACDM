@@ -19,38 +19,36 @@
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    // 异步下载
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //第一步，创建URL
-        
-        //NSURL *url = [NSURL URLWithString:@"http://10.1.44.39:8080/acdm/fpm/linkedFlightSearch.search.do"];
-        NSURL *url = [NSURL URLWithString:@"http://10.1.43.33:8082/api/Get/VesselPlan"];
-        
-        //第二步，创建请求
-        
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-        
-        [request setHTTPMethod:@"POST"];//设置请求方式为POST，默认为GET
-        
-        NSString *str = @"scheduledDateStart=2015-05-15 08:00:00&scheduledDateEnd=2015-05-15 23:00:00";//设置参数
-        
-        NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-        
-        [request setHTTPBody:data];
-        
-        //第三步，连接服务器
-        NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-        NSString *str1 = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
-        
-        
-        
-        // 回到主线程
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-            [def setValue:str1 forKey:@"Json"];
-        });
-    });
-    
+//    // 异步下载
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        //第一步，创建URL
+//        
+//        NSURL *url = [NSURL URLWithString:@"http://10.1.44.39:8080/acdm/fpm/linkedFlightSearch.search.do"];
+//       
+//        //第二步，创建请求
+//        
+//        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+//        
+//        [request setHTTPMethod:@"POST"];//设置请求方式为POST，默认为GET
+//        
+//        NSString *str = @"scheduledDateStart=2015-05-10 08:00:00&scheduledDateEnd=2015-05-10 23:00:00";//设置参数
+//        NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+//        
+//        [request setHTTPBody:data];
+//        
+//        //第三步，连接服务器
+//        NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+//        NSString *str1 = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
+//        NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+//        [def setValue:str1 forKey:@"List"];
+//        
+//        // 回到主线程
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(str1);
+//
+//        });
+//    });
+
     return YES;
 }
 

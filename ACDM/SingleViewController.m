@@ -9,8 +9,7 @@
 #import "SingleViewController.h"
 
 @interface SingleViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *rightButton;
-- (IBAction)toFirstView:(UIButton *)sender;
+
 
 @end
 
@@ -19,8 +18,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _rightButton.layer.borderWidth = 1.0;
-    _rightButton.layer.borderColor = [UIColor blackColor].CGColor;
+    // 异步下载
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //第一步，创建URL
+        
+        NSURL *url = [NSURL URLWithString:@"http://10.1.44.39:8080/acdm/fpm/flightDetail.getData.do"];
+        
+        //第二步，创建请求
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+        
+        [request setHTTPMethod:@"POST"];//设置请求方式为POST，默认为GET
+        
+        NSString *str = [NSString stringWithFormat:@"id=%@",self.id_];//设置参数
+        NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+        
+        [request setHTTPBody:data];
+        
+        //第三步，连接服务器
+        NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+        NSString *str1 = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
+        
+        // 回到主线程
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(str1);
+            
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning {

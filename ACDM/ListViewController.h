@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "List.h"
+#import <objc/message.h>
 
 @interface ListViewController : UIViewController
-
+@property NSMutableArray *array;
 @end

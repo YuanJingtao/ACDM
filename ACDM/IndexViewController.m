@@ -77,6 +77,12 @@
 - (IBAction)toSearchView:(UIButton *)sender {
     
 }
+- (IBAction)fiveButtonClick:(UITapGestureRecognizer *)sender {
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc]init];
+    [bbi setTitle:@"日运营简报"];
+    [self.navigationItem setBackBarButtonItem:bbi];
+    [self performSegueWithIdentifier:@"ReportSegue" sender:nil];
+}
 
 - (IBAction)buttonClicked:(UIButton *)sender {
     UIBarButtonItem *bbi = [[UIBarButtonItem alloc]init];
@@ -104,7 +110,7 @@
             [bbi setTitle:@"进/离港速率"];
             break;
         case 8:
-            [bbi setTitle:@"未来一小时态势"];
+            [bbi setTitle:@"未来一小时"];
             break;
         default:
             break;

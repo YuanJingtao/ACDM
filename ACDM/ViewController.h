@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "List.h"
+#import "ListViewController.h"
 
-@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
 
 @end
