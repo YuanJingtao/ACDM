@@ -41,7 +41,10 @@
         
         // 回到主线程
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(str1);
+            NSData *jsonData = [str1 dataUsingEncoding:NSUTF8StringEncoding];
+            NSError *error = nil;
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:&error];
+            
             
         });
     });
@@ -53,14 +56,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)toFirstView:(UIButton *)sender {
     [self.navigationController popToRootViewControllerAnimated:NO];

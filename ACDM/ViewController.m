@@ -140,33 +140,6 @@ enum {Date=0,Time};
     [self performSegueWithIdentifier:@"ListSegue" sender:nil];
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 1;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlaneCell"];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-
-//点击cell时传递行数
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
 
 - (IBAction)toFirstView:(UIButton *)sender {
     [self.navigationController popToRootViewControllerAnimated:NO];
