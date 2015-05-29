@@ -64,12 +64,12 @@
     List *list = self.array[indexPath.row];
     
     //日期格式转换
-    NSDate *date = [[NSDate alloc]init];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    formatter.dateFormat = @"yyyy-MM-dd";
-    date = [formatter dateFromString:list.scheduledDate];
-    formatter.dateFormat = @"yy/MM/dd";
-    list.scheduledDate = [formatter stringForObjectValue:date];
+//    NSDate *date = [[NSDate alloc]init];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//    formatter.dateFormat = @"yyyy-MM-dd";
+//    date = [formatter dateFromString:list.scheduledDate];
+//    formatter.dateFormat = @"yy/MM/dd";
+//    list.scheduledDate = [formatter stringForObjectValue:date];
     //时间去除‘-‘字符
     if ([list.thisStationArrivalDt rangeOfString:@"-"].length>0) {
         list.thisStationArrivalDt = [list.thisStationArrivalDt substringWithRange:NSMakeRange(0, list.thisStationArrivalDt.length-1)];
@@ -81,10 +81,10 @@
     [tmparray[2] setValue:list.aircraftRegistration forKey:@"text"];
     [tmparray[3] setValue:list.standPosition forKey:@"text"];
     [tmparray[4] setValue:list.scheduledDate forKey:@"text"];
-    [tmparray[5] setValue:list.thisStationArrivalDt forKey:@"text"];
+    [tmparray[5] setValue:list.thisStationArrivalDt forKey:@"text"];//改成起飞时间
     [tmparray[6] setValue:list.flightNatureCode forKey:@"text"];
     [tmparray[7] setValue:list.previousStationIataCode forKey:@"text"];
-    [tmparray[8] setValue:list.thisStationArrivalDt forKey:@"text"];
+    [tmparray[8] setValue:list.thisStationArrivalDt forKey:@"text"];//改成降落时间
     // Configure the cell...
     
     return cell;

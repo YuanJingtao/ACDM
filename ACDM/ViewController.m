@@ -29,10 +29,11 @@ static int currentPickerView;
 - (IBAction)finishButtonClick:(UIBarButtonItem *)sender;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerView;
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel2;
 
 @property NSMutableArray *array;
 @property NSMutableArray *backupArray;
-enum {Date=0,Time};
+enum {Date=0,Time,Time2};
 
 @end
 
@@ -179,9 +180,28 @@ enum {Date=0,Time};
     } completion:^(BOOL finished) {
         
     }];
+   
     currentPickerView = Time;
     
 }
+
+
+- (IBAction)popTime2:(id)sender {
+    [_datePickerView setDatePickerMode:UIDatePickerModeTime];
+    _datePickerViewLayout.constant = 35;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        
+        [self.view layoutIfNeeded];
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+    currentPickerView = Time2;
+    
+}
+
 - (IBAction)touchEdge:(UIControl *)sender {
     [self.flightNO resignFirstResponder];
     [self.planeNO resignFirstResponder];
@@ -198,10 +218,13 @@ enum {Date=0,Time};
         _dateLabel.text = [formatter stringFromDate:_datePickerView.date];
         
     }
-    else
+    else if(currentPickerView == Time)
     {
         [formatter setDateFormat:@"HH:mm"];
         _timeLabel.text = [formatter stringFromDate:_datePickerView.date];
+    }else{
+        [formatter setDateFormat:@"HH:mm"];
+        _timeLabel2.text = [formatter stringFromDate:_datePickerView.date];
     }
     _datePickerViewLayout.constant = -300;
     [UIView animateWithDuration:0.3 animations:^{

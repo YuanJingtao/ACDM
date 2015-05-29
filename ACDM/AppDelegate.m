@@ -23,7 +23,7 @@
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        //第一步，创建URL
 //        
-//        NSURL *url = [NSURL URLWithString:@"http://10.1.44.39:8080/acdm/fpm/linkedFlightSearch.search.do"];
+//        NSURL *url = [NSURL URLWithString:@"http://10.10.16.176:8080/acdm5/fpm/linkedFlightSearch.search.do"];
 //       
 //        //第二步，创建请求
 //        
@@ -31,7 +31,7 @@
 //        
 //        [request setHTTPMethod:@"POST"];//设置请求方式为POST，默认为GET
 //        
-//        NSString *str = @"scheduledDateStart=2015-05-10 08:00:00&scheduledDateEnd=2015-05-10 23:00:00";//设置参数
+//        NSString *str = @"scheduledDateStart=2015-05-01 08:00:00&scheduledDateEnd=2015-05-10 23:00:00";//设置参数
 //        NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
 //        
 //        [request setHTTPBody:data];
@@ -48,6 +48,52 @@
 //
 //        });
 //    });
+    NSString *str1 = @"[{\
+    \"updateDate\" : null,\
+    \"id\" : 10862483,\
+    \"_id\" : 10862483,\
+    \"_operationTypeCode\" : \"REG\",\
+    \"_scheduledDate\" : \"2015-05-01\",\
+    \"_flightIdentity\" : \"9C8848\",\
+    \"_aircraftRegistration\" : \"B6902\",\
+    \"_runwayId\" : null,\
+    \"_standPosition\" : \"51\",\
+    \"_actualOnBlocksDateTime\" : \"14:19-\",\
+    \"_flightNatureCode\" : \"PAX\",\
+    \"_scheduledDateTime\" : \"14:30-\",\
+    \"_estimatedDateTime\" : \"14:04-\",\
+    \"_wheelsDownDateTime\" : \"14:07-\",\
+    \"_codeShareStatus\" : null,\
+    \"_tenMileOutDateTime\" : null,\
+    \"_previousStationIataCode\" : \"LHW\",\
+    \"_thisStationArrivalDt\" : \"14:07-\",\
+    \"_previousStationDepartureDt\" : \"11:43-\",\
+    \"_previousStationScheduledDt\" : \"11:50-\",\
+    \"_previousStationEstimatedDt\" : \"11:50-\",\
+    \"_previousStationAirborneDt\" : \"11:43-\",\
+    \"id_\" : 10862862,\
+    \"operationTypeCode_\" : \"REG\",\
+    \"scheduledDate_\" : \"2015-05-01\",\
+    \"flightIdentity_\" : \"9C8893\",\
+    \"gateNumber_\" : \"C51\",\
+    \"runwayId_\" : null,\
+    \"standPosition_\" : \"51\",\
+    \"flightNatureCode_\" : \"PAX\",\
+    \"scheduledDateTime_\" : \"16:40-\",\
+    \"estimatedDateTime_\" : null,\
+    \"wheelsUpDateTime_\" : \"16:51-\",\
+    \"gateOpenDateTime_\" : null,\
+    \"gateCloseDateTime_\" : null,\
+    \"nextStationIataCode_\" : \"XMN\",\
+    \"nextStationActualDt_\" : \"18:28-\",\
+    \"nextStationEstimatedDt_\" : \"18:24-\",\
+    \"nextStationScheduledDt_\" : \"18:40-\",\
+    \"actualOffBlocksDateTime_\" : \"16:37-\",\
+    \"thisStationDepartureDt_\" : \"16:51-\",\
+    \"nextStationArrivalDt_\" : \"18:28-\"\
+}]";
+            NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+            [def setValue:str1 forKey:@"List"];
 
     return YES;
 }

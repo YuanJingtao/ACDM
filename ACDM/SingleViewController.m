@@ -10,6 +10,7 @@
 
 @interface SingleViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *airport;
 
 @end
 
@@ -22,7 +23,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //第一步，创建URL
         
-        NSURL *url = [NSURL URLWithString:@"http://10.1.44.39:8080/acdm/fpm/flightDetail.getData.do"];
+        NSURL *url = [NSURL URLWithString:@"http://10.10.16.176:8080/acdm5/fpm/flightDetail.getData.do"];
         
         //第二步，创建请求
         
@@ -44,9 +45,11 @@
             NSData *jsonData = [str1 dataUsingEncoding:NSUTF8StringEncoding];
             NSError *error = nil;
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:&error];
-            
+            NSArray *array = [dic valueForKey:@"Arrival"];
+            self.airport.text=[dic valueForKey:@""];
             
         });
+        
     });
 }
 

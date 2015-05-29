@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewLayout;
 @property (nonatomic) dispatch_source_t timer;
+
+@property (weak, nonatomic) IBOutlet UILabel *planNum;
+
+
 @end
 
 @implementation IndexViewController
